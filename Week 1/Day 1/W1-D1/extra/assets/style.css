@@ -1,0 +1,13 @@
+.colored {
+  background-color: yellow;
+}
+.bold {
+  font-weight: bold;
+}
+img {
+  width: 15%;
+  margin-left: 2%;
+}
+figcaption {
+  margin-left: 2%;
+}
