@@ -17,6 +17,11 @@ nav {
 nav p {
   padding-bottom: 1em;
 }
+
+header img {
+  width: 20%;
+}
+
 #container video {
   border-radius: 2%;
   width: 100%;
