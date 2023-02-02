@@ -58,7 +58,9 @@ nav a {
   box-shadow: -5px -5px -5px 3px rgb(59, 70, 73);
   border: 1px solid rgb(221, 211, 211);
 }
-
+#description {
+  color: gray;
+}
 span {
   background-color: lightgrey;
   border: solid 1px grey;
@@ -152,6 +154,7 @@ iframe {
 }
 
 article h2 {
+  text-transform: uppercase;
   text-align: center;
 }
 
@@ -191,6 +194,9 @@ article > div {
 .article p:last-child {
   text-align: right;
 }
+.tag {
+  margin-top: 0em;
+}
 
 /* FOOTER */
 footer {
@@ -211,4 +217,12 @@ address {
 footer a {
   color: rgb(180, 60, 180);
   font-weight: bolder;
+}
+header,
+footer,
+#content {
+  box-shadow: -2px 6px 6px 0px rgba(151, 151, 151, 1);
+}
+ {
+  box-shadow: -2px 2px 7px 0px rgba(151, 151, 151, 1);
 }
