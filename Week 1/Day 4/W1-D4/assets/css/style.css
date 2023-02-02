@@ -79,11 +79,9 @@ a {
   font-size: 13px;
   border-collapse: collapse;
 }
-header_css.txt
-1 KB
 
 /* ELEMENTI NEL MAIN - ARTICLE */
-article>h2 {
+article > h2 {
   text-align: center;
 }
 
@@ -205,8 +203,6 @@ article > div {
   font-weight: normal;
   text-decoration: inherit;
 }
-css_articolo.txt
-  1 KB
 
 /* FOOTER */
 #foot {
