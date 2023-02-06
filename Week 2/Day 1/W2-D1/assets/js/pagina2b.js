@@ -1,6 +1,3 @@
-alert("Usa il pop up per dare dei messaggi");
-window.alert("Sto studiando JS");
-
 var animale = "rinoceronte";
 var animaleDue = "zanzara";
 var AnimaleTre = "tigre";
