@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+body {
+  background-color: #415fe1;
+  color: white;
+  font-family: "roboto";
+}
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+p {
+  font-weight: bold;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+}
+img {
+  width: 20%;
+}
+body > p {
+  margin-left: 10%;
+  font-weight: bold;
+}
