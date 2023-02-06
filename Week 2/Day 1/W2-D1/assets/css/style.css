@@ -8,7 +8,9 @@ main {
   width: 80%;
   margin: 0 auto;
 }
-p {
+p,
+li,
+a {
   font-weight: bold;
 }
 a {
