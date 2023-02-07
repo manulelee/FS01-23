@@ -13,18 +13,11 @@ document.getElementById("concatena2").innerHTML = concatenazione;
 //Esercizio 3
 var nome1 = "Mario";
 document.getElementById("var").innerHTML = nome1;
-{
-  let nome1 = "Carla";
-  document.getElementById("let").innerHTML = nome1;
-}
 document.getElementById("final").innerHTML = nome1;
-{
-  let nome1 = "Carla";
-  document.getElementById("let").innerHTML = nome1;
-}
 document.getElementById("let2").innerHTML = nome1;
 {
   let nome1 = "Carla";
+  document.getElementById("let").innerHTML = nome1;
   document.getElementById("let3").innerHTML = nome1;
   document.getElementById("final2").innerHTML = nome1;
 }
