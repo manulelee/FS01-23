@@ -29,7 +29,7 @@ let btn2 = document.getElementById("btn2");
 
 btn2.addEventListener("click", function () {
   let c = document.getElementById("c").value;
-  if (c !== 5) {
+  if (c != 5) {
     esercizio2.innerHTML = `Not equal`;
   } else {
     esercizio2.innerHTML = "Equal";
