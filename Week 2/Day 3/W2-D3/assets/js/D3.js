@@ -61,7 +61,9 @@ let esercizio4 = document.getElementById("esercizio4");
 let btn4 = document.getElementById("btn4");
 btn4.addEventListener("click", function () {
   let e = document.getElementById("e").value;
+  e = parseInt(e);
   let f = document.getElementById("f").value;
+  f = parseInt(f);
   if (e == 8 || f == 8) {
     esercizio4.innerHTML = `${e} o ${f} è uguale a 8`;
   } else if (e - f == 8 || e + f == 8) {
