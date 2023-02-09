@@ -157,8 +157,11 @@ let esercizio8 = document.getElementById("esercizio8");
 let btn8 = document.getElementById("btn8");
 btn8.addEventListener("click", function () {
   let l = document.getElementById("l").value;
-  if (typeof l == "number") {
+  //console.log(isNaN(parseInt(l)));
+  if (isNaN(parseInt(l)) == false) {
     esercizio8.innerHTML = `${l} è un numero`;
+  } else if (l == "true" || l == "false") {
+    esercizio8.innerHTML = `${l} è un booleano`;
   } else {
     esercizio8.innerHTML = `${l} è: ${typeof l}`;
   }
