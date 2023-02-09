@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poller+One&display=swap");
+
+body {
+  background-color: black;
+  font-family: "Poller One", cursive;
+}
+div {
+  width: 60%;
+  text-align: center;
+  color: yellow;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+span {
+  font-size: 2em;
+}
