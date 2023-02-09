@@ -163,7 +163,7 @@ btn8.addEventListener("click", function () {
   } else if (l == "true" || l == "false") {
     esercizio8.innerHTML = `${l} è un booleano`;
   } else {
-    esercizio8.innerHTML = `${l} è: ${typeof l}`;
+    esercizio8.innerHTML = `${l} è una stringa`;
   }
 });
 // il campo passato da input è string!
