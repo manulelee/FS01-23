@@ -128,7 +128,16 @@ console.log(characters);
 console.log("Esercizio 3:");
 
 const femaleCharacters = [];
-femaleCharacters.push({ name: "Leia Organa", hair_color: "brown", eye_color: "brown" });
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender == "female") {
+    femaleCharacters.push({
+      name: starWarsCharacters[i].name,
+      hair_color: starWarsCharacters[i].hair_color,
+      eye_color: starWarsCharacters[i].eye_color,
+    });
+  }
+}
+
 console.log(femaleCharacters);
 
 /* ESERCIZIO 4
@@ -217,10 +226,10 @@ switch (true) {
   case totalMass == 500:
     console.log("Ship is halfloaded");
     break;
-  case totalMass > 700:
+  case totalMass > 700 && totalMass <= 900:
     console.log("Warning: Load is over 700");
     break;
-  case totalMass > 900:
+  case totalMass > 900 && totalMass <= 1000:
     console.log("Critical Load: Over 900");
     break;
   case totalMass > 1000:
