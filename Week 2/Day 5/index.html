@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://kit.fontawesome.com/e23cd71315.js" crossorigin="anonymous"></script>
+    <title>Javascript - giorno 5</title>
+  </head>
+  <body>
+    <main>
+      <div id="container">
+        <button type="button" id="restart" onclick="restart()"><i class="fa-solid fa-power-off"></i></button>
+        <h1 id="h1">JavaScript calc_</h1>
+
+        <div>
+          <h3 id="screen"></h3>
+        </div>
+
+        <div id="firstRow">
+          <button type="submit" id="7" value="7" onclick="num(this.id)">7</button>
+          <button type="button" id="8" value="8" onclick="num(this.id)">8</button>
+          <button type="button" id="9" value="9" onclick="num(this.id)">9</button>
+          <button type="button" id="/" class="operator" value="/" onclick="num(this.id)">
+            <i class="fa-solid fa-divide"></i>
+          </button>
+        </div>
+
+        <div id="secondRow">
+          <button type="button" id="4" value="4" onclick="num(this.id)">4</button>
+          <button type="button" id="5" value="5" onclick="num(this.id)">5</button>
+          <button type="button" id="6" value="6" onclick="num(this.id)">6</button>
+          <button type="button" id="*" class="operator" value="*" onclick="num(this.id)">
+            <i class="fa-solid fa-x"></i>
+          </button>
+        </div>
+
+        <div id="thirdRow">
+          <button type="button" id="1" value="1" onclick="num(this.id)">1</button>
+          <button type="button" id="2" value="2" onclick="num(this.id)">2</button>
+          <button type="button" id="3" value="3" onclick="num(this.id)">3</button>
+          <button type="button" id="-" class="operator" value="-" onclick="num(this.id)">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </div>
+
+        <div id="fourthRow">
+          <button type="button" id="C" value="C" onclick="cancel()">C</button>
+          <button type="button" id="0" value="0" onclick="num(this.id)">0</button>
+          <button type="button" id="." value="." onclick="num(this.id)">.</button>
+          <button type="button" id="+" class="operator" value="+" onclick="num(this.id)">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <div id="fifthRow">
+          <button type="button" id="equal" onclick="calc()">=</button>
+          <button type="button" id="delete" class="operator"><i class="fas fa-backspace"></i></button>
+        </div>
+      </div>
+
+      <div id="extra">
+        <h3 id="cronologia"></h3>
+        <ul id="risultati"></ul>
+      </div>
+    </main>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
