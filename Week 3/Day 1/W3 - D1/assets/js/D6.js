@@ -49,6 +49,21 @@ console.log(crazySum(4, 3));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+console.log("Esercizio 3");
+
+var num = 19;
+crazyDiff = (_num) => {
+  if (_num > num) {
+    return (_num - num) * 3;
+  } else {
+    return num - _num;
+  }
+};
+
+console.log(crazyDiff(1));
+console.log(crazyDiff(-1));
+console.log(crazyDiff(22));
+
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
@@ -80,6 +95,17 @@ console.log(boundary(100));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+console.log("Esercizio 5");
+
+epify = (_stringa) => {
+  if (_stringa.startsWith("EPICODE")) {
+    return _stringa;
+  }
+  return `EPICODE ${_stringa}`;
+};
+
+console.log(epify("EPICODE ti saluta"));
+
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
@@ -109,6 +135,13 @@ console.log(check3and7(22));
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
+console.log("Esercizio 7");
+
+reverseString = (_stringa) => {
+  return _stringa.split("").reverse().join("");
+};
+
+console.log(reverseString("CIAO"));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 8
@@ -118,12 +151,42 @@ console.log(check3and7(22));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+console.log("Esercizio 8");
+
+upperFirst = (_stringa) => {
+  splittedWords = _stringa.split(" ");
+  let finalRes = [];
+  for (let i = 0; i < splittedWords.length; i++) {
+    splittedLetters = splittedWords[i].split("");
+    let capitalized = "";
+    for (let l = 0; l < splittedLetters.length; l++) {
+      if (l === 0) {
+        let capitalizeFirst = splittedLetters[l].toUpperCase();
+        capitalized += capitalizeFirst;
+      } else {
+        capitalized += splittedLetters[l];
+      }
+    }
+    finalRes.push(capitalized + " ");
+  }
+  return finalRes.join("");
+};
+
+console.log(upperFirst("Ciao io sono stanco"));
+
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+console.log("Esercizio 9");
+
+cutString = (_stringa) => {
+  return _stringa.substring(1, _stringa.length - 1);
+};
+console.log(cutString("ciao a tutti"));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
