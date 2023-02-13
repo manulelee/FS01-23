@@ -60,15 +60,14 @@ console.log(shoppingCart);
 console.log("Esercizio 4 extra");
 
 maxShoppingCart = () => {
-  let mostExpensiveProduct = {
-    price: 0,
-  };
-  for (let i = 0; i < shoppingCart.length; i++) {
-    if (shoppingCart[i].price > mostExpensiveProduct.price) {
-      mostExpensiveProduct = shoppingCart[i];
+  let mostExpensiveProduct = shoppingCart[0];
+  shoppingCart.map((element) => {
+    if (element.price > mostExpensiveProduct.price) {
+      mostExpensiveProduct = element;
     }
-  }
-  return mostExpensiveProduct;
+  });
+
+  return `Il prodotto più costoso è: ${mostExpensiveProduct.name}, prezzo: ${mostExpensiveProduct.price}`;
 };
 console.log(maxShoppingCart());
 
