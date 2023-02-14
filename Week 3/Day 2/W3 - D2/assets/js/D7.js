@@ -192,7 +192,13 @@ const movies = [
 /* ESERCIZIO 16
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+const selectFilm = document.getElementById("selectFilm");
 const btnRicerca = document.getElementById("ricerca");
+window.addEventListener("load", function () {
+  for (i = 0; i < movies.length; i++) {
+    selectFilm.innerHTML += `<option value='${movies[i].imdbID}'>'${movies[i].Title}'</option>`;
+  }
+});
 
 btnRicerca.addEventListener("click", function () {
   let ricerca = document.getElementById("selectFilm").value;
