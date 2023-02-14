@@ -231,13 +231,6 @@ function trova(ricerca) {
   Scrivi una funzione per recuperare tutti i film dall'array fornito che contengono una parola fornita.
 */
 
-const selectFilm = document.getElementById("selectFilm");
-window.addEventListener("load", function () {
-  for (i = 0; i < movies.length; i++) {
-    selectFilm.innerHTML += `<option value='${movies[i].imdbID}'>'${movies[i].Title}'</option>`;
-  }
-});
-
 const btnRicerca2 = document.getElementById("ricerca2");
 var arraySearch = [];
 
