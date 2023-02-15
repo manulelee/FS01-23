@@ -1,20 +1,22 @@
 body {
-    background-color: blueviolet;
+  background-color: blueviolet;
 }
 
 .fatto {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .fatto::before {
-    content: "\f00c";
-    display: inline-block;
-    padding-right: 3px;
-    vertical-align: middle;
-    font-family: "FontAwesome";
-    src: url('../font/fontawesome-webfont.eot');
-    src: url('../font/fontawesome-webfont.eot?#iefix') format('eot'),
-        url('../font/fontawesome-webfont.woff') format('woff'),
-        url('../font/fontawesome-webfont.ttf') format('truetype'),
-        url('../font/fontawesome-webfont.svg#FontAwesome') format('svg');
+  content: "\f00c";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-family: "FontAwesome";
+}
+li {
+  margin: 2em;
+  width: 50%;
+  border-radius: 10px;
+  background-color: white;
+  padding: 1em;
 }
