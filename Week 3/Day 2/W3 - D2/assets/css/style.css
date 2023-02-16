@@ -12,16 +12,17 @@ body {
   margin: 0 auto;
   margin: 2em;
   width: 50%;
-  background-color: white;
   color: black;
   padding: 2em;
+}
+.movie {
+  background-color: white;
 }
 #container {
   border-radius: 10px;
   margin: 0 auto;
   margin: 2em;
   width: 50%;
-  background-color: white;
   color: black;
 }
 #name {
