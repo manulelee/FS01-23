@@ -122,11 +122,45 @@ console.log(lastestShoppingCart());
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+console.log("Esercizio 6 extra");
+
+loopUntil = (_numero) => {
+  let index = 0;
+  if (_numero < 10) {
+    while (index < 3) {
+      let randomNum = Math.floor(Math.random() * 10);
+      console.log(randomNum);
+      if (randomNum > _numero) {
+        index++;
+      } else {
+        index = 0;
+      }
+    }
+  } else {
+    console.log("Il numero inserito è maggiore di 9. Inserire un numero da 0 a 9.");
+  }
+};
+loopUntil(6);
+
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+console.log("Esercizio 7 extra");
+
+average = (_array) => {
+  var somma = 0;
+  _array.forEach((element) => {
+    if (typeof element == "number") {
+      somma += element;
+    }
+  });
+  return console.log(somma);
+};
+
+average([2, 4, "6", "sei", 2]);
 
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
@@ -134,12 +168,37 @@ Crea una funzione chiamata "average" che riceve un array come parametro e ne rit
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+console.log("Esercizio 8 extra");
+
+longest = (_array) => {
+  let longestString = "";
+  _array.forEach((element) => {
+    if (element.length > longestString.length) {
+      longestString = element;
+    }
+  });
+  return console.log(`La stringa più lunga è: ${longestString}`);
+};
+longest(["ciao", "sono", "Emanuele"]);
+
 /* EXTRA 9
  Crea una funzione per creare un filtro anti-spam per la tua casella email. La funzione riceve un parametro stringa chiamato "emailContent", e torna un valore booleano.
  La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+console.log("Esercizio 9 extra");
+
+antiSpam = (_emailContent) => {
+  if (_emailContent.toUpperCase().includes("SPAM") || _emailContent.toUpperCase().includes("SCAM")) {
+    return console.log(false);
+  } else {
+    return console.log(true);
+  }
+};
+
+antiSpam("Questa è un email di span");
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
@@ -173,3 +232,18 @@ console.log(howManyDays("2023, 2, 1"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+console.log("Esercizio 11 extra");
+
+matrixGenerator = (_x, _y) => {
+  let x = 0;
+  let result = [];
+  while (x < _y) {
+    for (let i = 0; i < _x; i++) {
+      result.push(x.toString() + i.toString());
+    }
+    x++;
+  }
+  return console.log(result);
+};
+matrixGenerator(4, 5);
