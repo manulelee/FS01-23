@@ -758,9 +758,9 @@ isItPrime = (_n) => {
     return true;
   } else if (_n > 2) {
     if (_n % 2 == 0 && _n % _n == 0) {
-      return true;
-    } else {
       return false;
+    } else {
+      return true;
     }
   } else {
     console.log(`${_n} è minore o uguale a 0, non può essere un numero primo`);
