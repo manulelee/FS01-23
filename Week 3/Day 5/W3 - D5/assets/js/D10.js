@@ -767,4 +767,9 @@ isItPrime = (_n) => {
     return false;
   }
 };
-console.log(isItPrime(2));
+console.log("2" + isItPrime(2));
+console.log("3" + isItPrime(3));
+console.log("4" + isItPrime(4));
+console.log("5" + isItPrime(5));
+console.log("6" + isItPrime(6));
+console.log("7" + isItPrime(7));
