@@ -451,16 +451,15 @@ console.log(isTodayMyBirthday());
 console.log("Esercizio 11 NO");
 
 deleteProp = (_stringa, _oggetto) => {
-  for (let i = 0; i < _oggetto.length; i++)
-    if (_oggetto[i] == _stringa) {
-      delete _oggetto._stringa;
-      return _oggetto;
-    } else {
-      return `L'oggetto ${_oggetto} non contiene la proprietà ${_stringa}`;
-    }
+  if (_oggetto._stringa) {
+    return delete _oggetto._stringa;
+  } else {
+    return `L'oggetto ${_oggetto} non contiene la proprietà ${_stringa}`;
+  }
+  consol;
 };
 
-console.log(deleteProp("Titolo", movies[0]));
+console.log(deleteProp("name", { name: "emanuele", surname: "syrbe" }));
 
 /* ESERCIZIO 12
   Scrivi una funzione chiamata "newestMovie" che trova il film più recente nell'array "movies" fornito.
@@ -767,9 +766,9 @@ isItPrime = (_n) => {
     return false;
   }
 };
-console.log("2" + isItPrime(2));
-console.log("3" + isItPrime(3));
-console.log("4" + isItPrime(4));
-console.log("5" + isItPrime(5));
-console.log("6" + isItPrime(6));
-console.log("7" + isItPrime(7));
+console.log("2 " + isItPrime(2));
+console.log("3 " + isItPrime(3));
+console.log("4 " + isItPrime(4));
+console.log("5 " + isItPrime(5));
+console.log("6 " + isItPrime(6));
+console.log("7 " + isItPrime(7));
