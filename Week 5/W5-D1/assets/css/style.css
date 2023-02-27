@@ -334,6 +334,7 @@ footer a {
   aside div {
     display: inline-block;
     width: 33%;
+    margin-inline: -3px;
   }
   section {
     border-radius: 25px;
