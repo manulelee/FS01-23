@@ -195,9 +195,10 @@ footer a {
 
 /* Mobile version (tested at 440px)*/
 
-@media screen and (min-width: 439px) {
+@media screen and (min-width: 320px) {
   nav ul li {
     display: inline-block;
+    margin: 0.2em;
   }
   section h2 {
     background-color: gray;
@@ -217,9 +218,129 @@ footer a {
   aside h2 {
     font-size: 2.6rem;
   }
+  article img {
+    max-width: 60px;
+    padding: 0.2em;
+    border: solid #00a0c6 4px;
+    outline: solid #a02571 4px;
+  }
 }
 
-/* Mid-screen version (tested at px)*/
+/* Mid-screen version (tested at 767px)*/
 
 @media screen and (min-width: 576px) {
-} ;
+  main {
+    font-size: 2rem;
+  }
+  header p,
+  nav {
+    font-size: 2rem;
+  }
+  section h2 {
+    background-color: gray;
+    color: black;
+    text-transform: capitalize;
+  }
+  h1 {
+    font-size: 3em;
+    line-height: 1.2em;
+  }
+  table {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 4em;
+    margin-top: 4em;
+  }
+  iframe {
+    height: 150px;
+  }
+  section h2 {
+    font-size: 2.5rem;
+  }
+  fieldset input {
+    width: 74%;
+    height: 40px;
+    padding: 20px;
+  }
+  fieldset button {
+    height: 40px;
+    width: 100px;
+  }
+
+  aside h2 {
+    font-size: 2.6rem;
+  }
+  article img {
+    max-width: 75px;
+    padding: 0.2em;
+    border: solid #00a0c6 4px;
+    outline: solid #a02571 4px;
+  }
+  footer {
+    font-size: 1.9rem;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  main,
+  header,
+  footer {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-bottom: 3em;
+  }
+  header div {
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav ul {
+    display: flex;
+  }
+
+  header p,
+  header li {
+    margin: 0;
+    font-size: 1.6rem;
+  }
+  header div img {
+    width: 35%;
+    padding-right: 2em;
+    margin: 0px;
+  }
+  main {
+    line-height: 2em;
+  }
+  table {
+    width: 60%;
+  }
+  iframe,
+  section {
+    margin: 0 auto;
+    width: 49.5%;
+  }
+  iframe {
+    height: 252.75px;
+  }
+  aside h2 {
+    padding-top: 2em;
+  }
+  aside div {
+    display: inline-block;
+    width: 33%;
+  }
+  section {
+    border-radius: 25px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
