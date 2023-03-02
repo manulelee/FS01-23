@@ -32,15 +32,15 @@ i {
 
 span i:nth-child(1) {
   opacity: 0;
-  animation: rotation1 10s infinite;
+  animation: rotation1 9s infinite;
 }
 span i:nth-child(2) {
   opacity: 0;
-  animation: rotation2 10s infinite;
+  animation: rotation2 9s infinite;
 }
 span i:nth-child(3) {
   opacity: 0;
-  animation: rotation3 10s infinite;
+  animation: rotation3 9s infinite;
 }
 
 @keyframes rotation1 {
