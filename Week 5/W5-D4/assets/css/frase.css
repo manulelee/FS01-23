@@ -8,3 +8,100 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#testoAlternato {
+  padding: 1em;
+  border: solid 2px black;
+  padding-right: 4em;
+}
+
+#testoAlternato span {
+  color: rgb(106, 136, 156);
+}
+i {
+  position: absolute;
+}
+
+span i:nth-child(1) {
+  opacity: 0;
+  animation: rotation1 10s infinite;
+}
+span i:nth-child(2) {
+  opacity: 0;
+  animation: rotation2 10s infinite;
+}
+span i:nth-child(3) {
+  opacity: 0;
+  animation: rotation3 10s infinite;
+}
+
+@keyframes rotation1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  16.5% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  33% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes rotation2 {
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+
+  33% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  44.5% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  66% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes rotation3 {
+  0% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+
+  66% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  82.5% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+}
