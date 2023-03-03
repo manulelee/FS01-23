@@ -8362,10 +8362,8 @@
       let button1 = document.getElementById("changeButton");
       let button2 = document.getElementById("changeButton2");
       let navBar = document.querySelector("nav");
-      let scrollEvent = document.getElementById("top");
-      console.log(scrollEvent);
       top.addEventListener("scroll", function () {
-        if (document.documentElement.scrollTop > 200) {
+        if (document.documentElement.scrollTop > 150) {
           console.log("scorro");
           button1.classList.remove("originalButton");
           button1.classList.add("changedButton");
