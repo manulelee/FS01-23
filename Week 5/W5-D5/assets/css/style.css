@@ -37,14 +37,16 @@ nav li {
 #top {
   display: flex;
   background-color: #ffc017;
+  position: relative;
+  padding: 4% 0em;
 }
 #top svg {
   padding: 1em;
   padding-right: 0em;
   max-width: 35%;
-  position: relative;
-  right: -15%;
-  top: auto;
+  position: absolute;
+  right: 0;
+  top: -16px;
 }
 #titolo {
   padding-left: 15%;
