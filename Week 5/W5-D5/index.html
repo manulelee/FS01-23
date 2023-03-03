@@ -19,7 +19,7 @@
         <li>Membership</li>
         <li>Write</li>
         <li>Sign in</li>
-        <li class="button">Get started</li>
+        <li id="changeButton" class="button">Get started</li>
       </ul>
     </nav>
     <header>
@@ -30,7 +30,7 @@
             Discover stories, thinking, and expertise <br />
             writers on any topic.
           </h4>
-          <p class="button">Start reading</p>
+          <p id="changeButton2" class="button">Start reading</p>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -8358,5 +8358,18 @@
         </div>
       </div>
     </div>
+    <script>
+      let button1 = document.getElementById("changeButton");
+      let button2 = document.getElementById("changeButton2");
+      let navBar = document.querySelector("nav");
+      let scrollEvent = document.getElementById("top");
+      console.log(scrollEvent);
+      top.addEventListener("scroll", function () {
+        console.log("scorro");
+        button1.classList.add("changedButton");
+        button2.classList.add("changedButton");
+        navBar.classList.add("changedNav");
+      });
+    </script>
   </body>
 </html>
