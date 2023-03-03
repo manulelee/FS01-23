@@ -102,6 +102,7 @@ article {
   justify-content: flex-start;
   margin-bottom: 2em;
   margin-left: 2em;
+  height: auto;
 }
 span.num {
   font-size: 2em;
