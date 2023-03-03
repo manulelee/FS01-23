@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+nav {
+  padding: 1.5em 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffc017;
+  border-bottom: 1px solid black;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+nav li {
+  margin: 0em 1.5em;
+}
+#logo {
+  width: 20%;
+}
+#logo img {
+  width: 100%;
+}
+#top {
+  display: flex;
+  background-color: #ffc017;
+}
+#top svg {
+  padding: 1em;
+  padding-right: 0em;
+  max-width: 35%;
+  position: relative;
+  right: -15%;
+  top: auto;
+}
+#titolo {
+  padding-left: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#titolo h1 {
+  font-size: 100px;
+  margin-bottom: 35px;
+  font-family: "Spectral", serif;
+}
+#titolo h4 {
+  font-size: 24px;
+  margin-bottom: 35px;
+}
+.button {
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  padding: 0.5em;
+}
+
+p.button {
+  width: 200px;
+  font-size: 24px;
+  text-align: center;
+  border-radius: 25px;
+}
+#container,
+#container2 {
+  padding: 0 10%;
+  margin: auto;
+  margin-top: 2.5em;
+}
+#container > p {
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+#container p img {
+  margin-right: 0.5em;
+}
+aside {
+  display: flex;
+  flex-wrap: wrap;
+}
+article {
+  display: flex;
+  width: 30%;
+  height: 90px;
+  justify-content: flex-start;
+  margin-bottom: 2em;
+  margin-left: 2em;
+}
+span.num {
+  font-size: 2em;
+  color: lightgrey;
+  padding-right: 1em;
+}
+article > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+div.info {
+  display: flex;
+  color: gray;
+  font-weight: 300;
+  justify-content: space-between;
+  font-size: 0.8em;
+}
+
+.title {
+  font-weight: bold;
+}
+div .author {
+  display: flex;
+  align-items: center;
+}
+
+.author img {
+  border-radius: 50%;
+  margin-right: 0.5em;
+  height: 20px;
+  width: 20px;
+}
+hr {
+  padding: 0;
+}
+
+main {
+  width: 65%;
+}
+.article {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.article > img {
+  width: 200px;
+  margin-left: 1em;
+}
+.article > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+.article .title {
+  font-size: 25px;
+}
+
+.article .text {
+  color: gray;
+  font-weight: 300;
+}
+.article .category {
+  background-color: lightgray;
+  padding: 0.2em 1em;
+  border-radius: 20px;
+}
+
+.article .info {
+  display: flex;
+  align-items: center;
+  font-size: 0.8em;
+  justify-content: flex-start;
+}
+.article .info .icons {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+#container2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+#right {
+  margin-left: 4em;
+  width: 32%;
+}
+#right > div {
+  position: sticky;
+  top: 90px;
+}
+
+#right h5 {
+  font-weight: 600;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
+#categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#categories p {
+  font-size: smaller;
+  padding: 1em;
+  margin: 0.5em;
+  border: 1px solid gray;
+}
+#right hr {
+  margin-top: 1em;
+}
+
+#right ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+#right ul li {
+  margin: 0.2em 0.7em;
+}
+#right ul,
+#right hr,
+#right p {
+  color: gray;
+}
