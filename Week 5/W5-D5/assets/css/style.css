@@ -240,3 +240,12 @@ main {
   background-color: white;
   transition: all 1s;
 }
+
+.originalButton {
+  background-color: black;
+  transition: all 1s;
+}
+.originalNav {
+  background-color: #ffc017;
+  transition: all 1s;
+}
