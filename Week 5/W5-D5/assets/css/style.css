@@ -234,9 +234,9 @@ main {
 
 .changedButton {
   background-color: green;
-  transition: all 2s;
+  transition: all 1s;
 }
 .changedNav {
   background-color: white;
-  transition: all 2s;
+  transition: all 1s;
 }

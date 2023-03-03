@@ -8365,10 +8365,17 @@
       let scrollEvent = document.getElementById("top");
       console.log(scrollEvent);
       top.addEventListener("scroll", function () {
-        console.log("scorro");
-        button1.classList.add("changedButton");
-        button2.classList.add("changedButton");
-        navBar.classList.add("changedNav");
+        if (document.documentElement.scrollTop > 300) {
+          console.log("scorro");
+          button1.classList.add("changedButton");
+          button2.classList.add("changedButton");
+          navBar.classList.add("changedNav");
+        } else {
+          console.log("scorro");
+          button1.classList.remove("changedButton");
+          button2.classList.remove("changedButton");
+          navBar.classList.remove("changedNav");
+        }
       });
     </script>
   </body>
