@@ -3,18 +3,55 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Worst Rayanair copy</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
   </head>
+  <style>
+    nav img {
+      max-width: 200px;
+    }
+    nav div,
+    #start div {
+      background-color: #093490 !important;
+    }
+    #sales .card {
+      height: 310px;
+      position: relative;
+    }
+    .card img {
+      height: 141.273px;
+    }
+    .card .btn {
+      position: absolute;
+      bottom: 15px;
+    }
+
+    #summer .card {
+      height: 350px;
+      position: relative;
+    }
+    #offers img {
+      width: 100%;
+    }
+    #last img {
+      max-width: 100%;
+      width: 100%;
+      height: 143px;
+    }
+    #review i {
+      font-size: 2.3em;
+    }
+  </style>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary pt-0">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#"><img src="assets/img/download.png" alt="logo rayanair" /> </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -29,36 +66,39 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#start">Home</a>
+              <a class="nav-link text-light" aria-current="page" href="#start">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#sales">Saldi</a>
+              <a class="nav-link text-light" href="#sales">Saldi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#summer">Welcome Summer</a>
+              <a class="nav-link text-light" href="#summer">Welcome Summer</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#last">Last Minute</a>
+              <a class="nav-link text-light" href="#last">Last Minute</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#review">Recensioni</a>
+              <a class="nav-link text-light" href="#review">Recensioni</a>
             </li>
           </ul>
         </div>
         <form class="d-none d-lg-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Cerca posti da sogno" aria-label="Search" />
-          <button class="btn btn-outline-danger" type="submit">Cerca</button>
+          <input class="form-control me-2" type="search" placeholder="Cerca il tuo volo" aria-label="Search" />
+          <button class="btn btn-outline-warning" type="submit">Cerca</button>
         </form>
       </div>
     </nav>
     <div id="start" class="container bg-body-secondary my-4">
-      <div class="row">
-        <div class="col col-7 text-center fs-5">Eveline-R-</div>
-        <div class="col col-5">Feel the Freedom</div>
+      <div class="row py-3">
+        <div class="col col-12 text-center fs-5">
+          <h1 class="h2 text-warning">Segli la tua prossima meta!</h1>
+        </div>
+        <div class="col col-12 text-center"><p class="text-light">Prezzi per l'Europa a partire da 19€</p></div>
       </div>
-      <hr />
       <div class="row">
-        <div class="col col-12">Scopri le destinazioni più calde del momento</div>
+        <div class="col col-12 text-center p-3">
+          <h4 class="text-warning h3">Scopri le destinazioni più calde del momento</h4>
+        </div>
       </div>
     </div>
 
@@ -66,79 +106,47 @@
       <div class="row">
         <div class="col d-flex justify-content-between">
           <h3 class="h3">Saldi</h3>
-          <p class="text-info">Nascondi sezione</p>
+          <p class="text-primary">Nascondi sezione</p>
         </div>
       </div>
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col col-6 col-md-4 col-lg-3 my-2">
-          <div class="card border border-2 border-info">
-            <img
-              src="https://placedog.net/500/280
-            "
-              class="card-img-top"
-              alt="..."
-            />
+          <div class="card border border-2 border-primary">
+            <img src="assets/img/helsinki.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Titolo</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illo eum, a quasi odio sapiente nulla
-                nam accusamus iusto possimus asperiores quis quod vero quidem dolores quas at maxime ea!
-              </p>
-              <a href="#" class="btn btn-info">Prenota</a>
+              <h5 class="card-title">Finlandia</h5>
+              <p class="card-text">Hellsinki - a partire da 19€</p>
+              <a href="#" class="btn btn-warning border border-1 border-primary text-primary">Prenota</a>
             </div>
           </div>
         </div>
         <div class="col col-6 col-md-4 col-lg-3 my-2">
-          <div class="card border border-2 border-info">
-            <img
-              src="https://placedog.net/500/280
-              "
-              class="card-img-top"
-              alt="..."
-            />
+          <div class="card border border-2 border-primary">
+            <img src="assets/img/parigi.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Titolo</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illo eum, a quasi odio sapiente nulla
-                nam accusamus iusto possimus asperiores quis quod vero quidem dolores quas at maxime ea!
-              </p>
-              <a href="#" class="btn btn-info">Prenota</a>
+              <h5 class="card-title">Francia</h5>
+              <p class="card-text">Parigi - a partire da 19€</p>
+              <a href="#" class="btn btn-warning border border-1 border-primary text-primary">Prenota</a>
             </div>
           </div>
         </div>
         <div class="col col-6 col-md-4 col-lg-3">
-          <div class="card border border-2 border-info">
-            <img
-              src="https://placedog.net/500/280
-              "
-              class="card-img-top"
-              alt="..."
-            />
+          <div class="card border border-2 border-primary">
+            <img src="assets/img/fuerteventura.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Titolo</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illo eum, a quasi odio sapiente nulla
-                nam accusamus iusto possimus asperiores quis quod vero quidem dolores quas at maxime ea!
-              </p>
-              <a href="#" class="btn btn-info">Prenota</a>
+              <h5 class="card-title">Canarie</h5>
+              <p class="card-text">Fuerteventura - a partire da 19€</p>
+              <a href="#" class="btn btn-warning border border-1 border-primary text-primary">Prenota</a>
             </div>
           </div>
         </div>
         <div class="col col-6 d-md-none d-lg-block col-lg-3">
-          <div class="card border border-2 border-info">
-            <img
-              src="https://placedog.net/500/280
-              "
-              class="card-img-top"
-              alt="..."
-            />
+          <div class="card border border-2 border-primary">
+            <img src="assets/img/ibiza.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Titolo</h5>
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illo eum, a quasi odio sapiente nulla
-                nam accusamus iusto possimus asperiores quis quod vero quidem dolores quas at maxime ea!
-              </p>
-              <a href="#" class="btn btn-info">Prenota</a>
+              <h5 class="card-title">Spagna</h5>
+              <p class="card-text">Ibiza - a partire da 19€</p>
+              <a href="#" class="btn btn-warning border border-1 border-primary text-primary">Prenota</a>
             </div>
           </div>
         </div>
@@ -149,136 +157,113 @@
       <div class="row">
         <div class="col d-flex justify-content-between">
           <h3 class="h3">Welcome summer</h3>
-          <p class="text-info">Nascondi sezione</p>
+          <p class="text-primary">Nascondi sezione</p>
         </div>
       </div>
 
       <div class="row">
         <div class="col col-6 col-lg-4 my-2">
           <div class="card shadow-lg">
-            <img
-              src="https://placedog.net/500/280
-                "
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="assets/img/napoli.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Titolo</h5>
+              <h5 class="card-title">Campania</h5>
               <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illo eum, a quasi odio sapiente nulla
-                nam accusamus iusto possimus asperiores quis quod vero quidem dolores quas at maxime ea!
+                Napoli - da 28€ <br />
+                Salerno - da 35€
               </p>
-              <a href="#" class="btn btn-info">Prenota</a>
+              <a href="#" class="btn btn-warning border border-1 border-primary text-primary">Prenota</a>
             </div>
           </div>
         </div>
 
         <div class="col col-6 col-lg-4 my-2">
           <div class="card shadow-lg">
-            <img
-              src="https://placedog.net/500/280
-                  "
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="assets/img/cagliari.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Titolo</h5>
+              <h5 class="card-title">Sardegna</h5>
               <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illo eum, a quasi odio sapiente nulla
-                nam accusamus iusto possimus asperiores quis quod vero quidem dolores quas at maxime ea!
+                Cagliari - da 80€ <br />
+                Olbia - da 45€
               </p>
-              <a href="#" class="btn btn-info">Prenota</a>
+              <a href="#" class="btn btn-warning border border-1 border-primary text-primary">Prenota</a>
             </div>
           </div>
         </div>
 
         <div class="col col-6 col-lg-4 my-2">
           <div class="card shadow-lg">
-            <img
-              src="https://placedog.net/500/280
-                  "
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="assets/img/dubai.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Titolo</h5>
+              <h5 class="card-title">Emirati Arabi</h5>
               <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illo eum, a quasi odio sapiente nulla
-                nam accusamus iusto possimus asperiores quis quod vero quidem dolores quas at maxime ea!
+                Dubai - da 370€ <br />
+                Doha - da 422€ <br />
+                Ras Al Khaimah - da 482€
               </p>
-              <a href="#" class="btn btn-info">Prenota</a>
+              <a href="#" class="btn btn-warning border border-1 border-primary text-primary">Prenota</a>
             </div>
           </div>
         </div>
 
         <div class="col col-6 col-lg-4 my-2">
           <div class="card shadow-lg">
-            <img
-              src="https://placedog.net/500/280
-                  "
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="assets/img/india.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Titolo</h5>
+              <h5 class="card-title">India</h5>
               <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illo eum, a quasi odio sapiente nulla
-                nam accusamus iusto possimus asperiores quis quod vero quidem dolores quas at maxime ea!
+                Bangalore - da 683€ <br />
+                Delhi - da 537€ <br />
+                Calcutta - da 655€ <br />
               </p>
-              <a href="#" class="btn btn-info">Prenota</a>
+              <a href="#" class="btn btn-warning border border-1 border-primary text-primaryo">Prenota</a>
             </div>
           </div>
         </div>
 
         <div class="col col-6 col-lg-4 my-2">
           <div class="card shadow-lg">
-            <img
-              src="https://placedog.net/500/280
-                  "
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="assets/img/australia.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Titolo</h5>
+              <h5 class="card-title">Australia</h5>
               <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illo eum, a quasi odio sapiente nulla
-                nam accusamus iusto possimus asperiores quis quod vero quidem dolores quas at maxime ea!
+                Sydney - da 520€ <br />
+                Brisbane - da 459€ <br />
+                Melbourne - da 529€ <br />
               </p>
-              <a href="#" class="btn btn-info">Prenota</a>
+              <a href="#" class="btn btn-warning border border-1 border-primary text-primary">Prenota</a>
             </div>
           </div>
         </div>
 
         <div class="col col-6 col-lg-4 my-2">
           <div class="card shadow-lg">
-            <img
-              src="https://placedog.net/500/280
-                  "
-              class="card-img-top"
-              alt="..."
-            />
+            <img src="assets/img/fuerteventura.jpg" class="card-img-top" alt="..." />
             <div class="card-body">
-              <h5 class="card-title">Titolo</h5>
+              <h5 class="card-title">Canarie</h5>
               <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident illo eum, a quasi odio sapiente nulla
-                nam accusamus iusto possimus asperiores quis quod vero quidem dolores quas at maxime ea!
+                Fuerteventura - da 45€ <br />
+                Tenerife - da 30€ <br />
+                Gran Canaria - da 82€
               </p>
-              <a href="#" class="btn btn-info">Prenota</a>
+              <a href="#" class="btn btn-warning border border-1 border-primary text-primary">Prenota</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container my-4">
+    <div id="offers" class="container my-4">
       <div class="row">
         <div class="col"><h3 class="h3">Offerta del giorno</h3></div>
       </div>
       <div class="row">
-        <img class="col col-6 col-lg-8" src="https://placedog.net/500/280" />
+        <div class="col col-6 col-lg-8"><img src="assets/img/maldive.jpg" /></div>
         <div class="col col-6 col-lg-4">
           <h3 class="h3">Fushifaru Maldives</h3>
-          <p>15.01.2021 - 31.1.2021</p>
-          <p>Ville a partire da 500€, non fartele sfuggire</p>
+          <p class="font-monospace">15.01.2021 - 31.1.2021</p>
+          <p>
+            Ville a partire da 500€,<br />
+            non fartele sfuggire
+          </p>
 
           <div class="btn btn-dark">Best offer</div>
         </div>
@@ -290,12 +275,12 @@
         <div class="col"><h3 class="h3">Last Minute</h3></div>
       </div>
       <div class="row">
-        <img class="rounded-5 my-2 col col-6 col-md-4 col-lg-2" src="https://placedog.net/500/280" />
-        <img class="rounded-5 my-2 col col-6 col-md-4 col-lg-2" src="https://placedog.net/500/280" />
-        <img class="rounded-5 my-2 col col-6 col-md-4 col-lg-2" src="https://placedog.net/500/280" />
-        <img class="rounded-5 my-2 col col-6 col-md-4 col-lg-2" src="https://placedog.net/500/280" />
-        <img class="rounded-5 my-2 col col-6 col-md-4 col-lg-2" src="https://placedog.net/500/280" />
-        <img class="rounded-5 my-2 col col-6 col-md-4 col-lg-2" src="https://placedog.net/500/280" />
+        <div class="my-2 col col-6 col-md-4 col-lg-2"><img class="rounded-2" src="assets/img/parigi.jpg" /></div>
+        <div class="my-2 col col-6 col-md-4 col-lg-2"><img class="rounded-2" src="assets/img/cagliari.jpg" /></div>
+        <div class="my-2 col col-6 col-md-4 col-lg-2"><img class="rounded-2" src="assets/img/fuerteventura.jpg" /></div>
+        <div class="my-2 col col-6 col-md-4 col-lg-2"><img class="rounded-2" src="assets/img/ibiza.jpg" /></div>
+        <div class="my-2 col col-6 col-md-4 col-lg-2"><img class="rounded-2" src="assets/img/napoli.jpg" /></div>
+        <div class="my-2 col col-6 col-md-4 col-lg-2"><img class="rounded-2" src="assets/img/india.jpg" /></div>
       </div>
     </div>
 
@@ -305,46 +290,37 @@
       </div>
 
       <div class="row">
-        <div class="col col-1">IMG</div>
+        <div class="col col-1"><i class="bi bi-person-circle"></i></div>
         <div class="col col-11">
-          <h5 class="h5">Username</h5>
+          <h5 class="h5">Aldo</h5>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, incidunt iste. Assumenda suscipit ea
-            exercitationem, non impedit veniam alias. Pariatur, in? Excepturi eligendi deleniti dolores cumque omnis
-            laborum quibusdam earum?
+            "Non riesco nè a scendere e nè a salire" <br />
+            "Finisco la peperonata e scendo"
           </p>
         </div>
       </div>
 
       <div class="row">
-        <div class="col col-1">IMG</div>
+        <div class="col col-1"><i class="bi bi-person-circle"></i></div>
         <div class="col col-11">
-          <h5 class="h5">Username</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, incidunt iste. Assumenda suscipit ea
-            exercitationem, non impedit veniam alias. Pariatur, in? Excepturi eligendi deleniti dolores cumque omnis
-            laborum quibusdam earum?
-          </p>
+          <h5 class="h5">Giovanni</h5>
+          <p>"Scusa, puoi togliere i piedi dal cruscotto, che lo sporchi?"</p>
         </div>
       </div>
 
       <div class="row">
-        <div class="col col-1">IMG</div>
+        <div class="col col-1"><i class="bi bi-person-circle"></i></div>
         <div class="col col-11">
-          <h5 class="h5">Username</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, incidunt iste. Assumenda suscipit ea
-            exercitationem, non impedit veniam alias. Pariatur, in? Excepturi eligendi deleniti dolores cumque omnis
-            laborum quibusdam earum?
-          </p>
+          <h5 class="h5">Giacomo</h5>
+          <p>"Fuori dal letto? Nessuno è perfetto"</p>
         </div>
       </div>
     </div>
 
     <footer>
       <div class="container-fluid bg-dark p-2">
-        <div class="row d-flex justify-content-center">
-          <div class="col col-2 my-3">
+        <div class="row">
+          <div class="col d-flex justify-content-center col-12 my-3">
             <div class="text-center btn border border-1 border-secondary text-secondary">Contattaci</div>
           </div>
         </div>
