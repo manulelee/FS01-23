@@ -107,7 +107,7 @@ const addCar = function (newCarBrand, newCarModel, newCarColor, newCarTrims, new
     trims: newCarTrims,
     licensePlate: newCarLicensePlate,
   });
-  return cars[cars.length - 1];
+  return `Nuova lunghezza dell'array: ${cars.length}`;
 };
 
 console.log(addCar("Ford", "C-Max", "gray", ["titanium", "nonloso"], "AB111CD"));
@@ -187,12 +187,12 @@ while (numericArray[i] !== 66) {
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
-const charactersArray = ["g", "n", "u", "z", "d"];
+const charactersArray = ["G", "n", "u", "z", "d"];
 
 console.log("ESERCIZIO 14");
 let newCharactersArray = [];
 charactersArray.forEach((c) => {
-  switch (c) {
+  switch (c.toLowerCase()) {
     case "a":
       newCharactersArray.push(1);
       break;
@@ -258,4 +258,5 @@ charactersArray.forEach((c) => {
       break;
   }
 });
+console.log(charactersArray);
 console.log(newCharactersArray);
