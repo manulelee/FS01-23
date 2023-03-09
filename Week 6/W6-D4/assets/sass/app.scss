@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import "./partials/reset";
+@import "./partials/variables";
+@import "./partials/btn";
+@import "./partials/mixins";
+@import "./partials/animations";
+
+* {
+  font-family: $mainFontFamily;
+}
+
+nav {
+  @include spacing("block", "margin", $none);
+  text-align: left;
+  background-color: black;
+  color: $textColor;
+  font-size: $fontSizeL;
+
+  ul {
+    @include spacing("block", "padding", $md);
+    @include flexItem(row, start, center);
+    li {
+      list-style-type: none;
+      padding: 2em;
+    }
+  }
+}
+.hero {
+  background-color: $backgroundColor;
+  @include flexItem(row, start, center);
+  flex-wrap: wrap;
+  h1 {
+    @include titleBig;
+    @include spacing("block", "padding", $md);
+    width: 100%;
+  }
+  p {
+    width: 65%;
+    @include spacing("block", "padding", $md);
+  }
+  img {
+    @include floating(10px, 2px 2px 10px 5px #000000, 2px solid gray);
+    width: 30%;
+    aspect-ratio: 1/1;
+  }
+}
+
+#imgContainer {
+  @include flexItem(row, space-around, center);
+  @include spacing("block", "margin", $lg);
+  img {
+    @include floating();
+    @include spacing("block", "margin", $none);
+    @include spacing("block", "padding", $none);
+    width: 20%;
+    height: auto;
+  }
+}

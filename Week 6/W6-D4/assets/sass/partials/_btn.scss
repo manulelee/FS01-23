@@ -1,0 +1,12 @@
+#btnGroup {
+  @include spacing("block", $md, $normal);
+  button#first {
+    background-color: $buttonColor1;
+  }
+  button#second {
+    background-color: $buttonColor2;
+  }
+  button#third {
+    background-color: $buttonColor3;
+  }
+}
