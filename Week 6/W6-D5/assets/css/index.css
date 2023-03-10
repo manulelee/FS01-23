@@ -1,0 +1,73 @@
+body {
+  width: 100vw !important;
+}
+nav #logo {
+  width: 10% !important;
+}
+#logo img {
+  width: 100%;
+}
+#avatarDropdown {
+  width: 80px;
+  margin-right: 1rem !important;
+}
+#avatarDropdown img {
+  width: 80%;
+}
+#avatarDropdown li {
+  width: 50px;
+}
+#trending img,
+#rewatch img,
+#new img {
+  width: 100% !important;
+}
+
+#footer {
+  width: 60%;
+  margin: auto;
+}
+#footer,
+#profile {
+  width: 40%;
+  margin: auto;
+}
+#icons i,
+#links a,
+#btn div,
+nav li,
+#profile #btns div {
+  cursor: pointer !important;
+}
+
+#links,
+#btn {
+  font-size: 0.5em;
+}
+#info {
+  font-size: 0.4em;
+}
+
+#profile img {
+  width: 100%;
+}
+#profileImgContainer {
+  position: relative;
+}
+#profile i {
+  position: absolute;
+  top: 170px;
+  left: 25px;
+  cursor: pointer;
+}
+
+#trending img:hover,
+#rewatch img:hover,
+#new img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+.pointer {
+  cursor: pointer;
+}
