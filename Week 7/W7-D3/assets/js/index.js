@@ -2,6 +2,7 @@ let bookshelfRef = document.getElementById("row");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let booksArray = [];
 let cartRef = document.getElementById("cart");
+let totalPrice = parseFloat(localStorage.getItem("total")) || 0;
 
 fetch("http://striveschool-api.herokuapp.com/books")
   .then((res) => {
@@ -32,11 +33,14 @@ fetch("http://striveschool-api.herokuapp.com/books")
   });
 
 let addCart = function (event) {
+  totalPrice = parseFloat(localStorage.getItem("total")) || 0;
   let cartElement = event.target.parentNode.parentNode.parentNode.getAttribute("id");
   let foundBook = booksArray.filter((book) => book.asin == cartElement);
   cart.push(foundBook[0]);
+  totalPrice += parseFloat(foundBook[0].price);
   foundBook = [];
   localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem("total", totalPrice);
   print();
 };
 
@@ -46,12 +50,14 @@ let remove = function (event) {
 
 let removeFromCart = function (event) {
   let cartArray = JSON.parse(localStorage.getItem("cart"));
+  totalPrice = parseFloat(localStorage.getItem("total"));
   let cartElementId = event.target.parentNode.getAttribute("id");
   //console.log(cartElementId);
   let foundBook = cartArray.filter((book) => book.asin == cartElementId);
   let foundIndex = cartArray.indexOf(foundBook[0]);
   //console.log(cartArray);
   cartArray.splice(foundIndex, 1);
+  localStorage.setItem("total", totalPrice - foundBook[0].price);
   //console.log(cartArray);
   localStorage.setItem("cart", JSON.stringify(cartArray));
   foundBook = [];
@@ -61,6 +67,7 @@ let removeFromCart = function (event) {
 //console.log(JSON.parse(cart));
 
 let print = function () {
+  document.getElementById("cartTitle").innerText = `MY CART (${localStorage.getItem("total")} €)`;
   let storage = localStorage.getItem("cart");
   let cartArray = JSON.parse(storage);
   if (cartArray) {
