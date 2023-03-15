@@ -45,14 +45,17 @@ let remove = function (event) {
 };
 
 let removeFromCart = function (event) {
-  let cartArray = JSON.parse(cart);
+  let cartArray = JSON.parse(localStorage.getItem("cart"));
   let cartElementId = event.target.parentNode.getAttribute("id");
   console.log(cartElementId);
-  let foundBook = booksArray.filter((book) => book.asin == cartElementId);
+  let foundBook = cartArray.filter((book) => book.asin == cartElementId);
   let foundIndex = cartArray.indexOf(foundBook[0]);
+  console.log(cartArray);
   cartArray.splice(foundIndex, 1);
+  console.log(cartArray);
   localStorage.setItem("cart", JSON.stringify(cartArray));
   foundBook = [];
+
   print();
 };
 
