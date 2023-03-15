@@ -46,13 +46,13 @@ let remove = function (event) {
 
 let removeFromCart = function (event) {
   let cartArray = JSON.parse(cart);
-  let cartElement = event.target.parentNode.getAttribute("id");
-  console.log(cartElement);
-  let foundBook = booksArray.filter((book) => book.asin == cartElement);
+  let cartElementId = event.target.parentNode.getAttribute("id");
+  console.log(cartElementId);
+  let foundBook = booksArray.filter((book) => book.asin == cartElementId);
   let foundIndex = cartArray.indexOf(foundBook[0]);
-  foundBook = [];
   cartArray.splice(foundIndex, 1);
   localStorage.setItem("cart", JSON.stringify(cartArray));
+  foundBook = [];
   print();
 };
 
@@ -60,20 +60,21 @@ let removeFromCart = function (event) {
 
 let print = function () {
   let storage = localStorage.getItem("cart");
-
   let cartArray = JSON.parse(storage);
-  console.log(cartArray);
-  cartRef.innerHTML = "";
-  cartArray.forEach((el) => {
-    let newLi = document.createElement("li");
-    newLi.innerHTML = `
+  if (cartArray) {
+    console.log(cartArray);
+    cartRef.innerHTML = "";
+    cartArray.forEach((el) => {
+      let newLi = document.createElement("li");
+      newLi.innerHTML = `
     <div class="card-body text-light m-2" id=${el.asin}>
     <img src=${el.img} class="card-img-top" alt="copertina ${el.name}">
       <h5 class="card-title">${el.title}</h5>
       <p class="card-text b">Price: ${el.price} €</p>
       <div onclick="removeFromCart(event)" class="btn btn-danger mx-2">REMOVE FROM CART</div>
     </div>`;
-    cartRef.appendChild(newLi);
-  });
+      cartRef.appendChild(newLi);
+    });
+  }
 };
 print();
