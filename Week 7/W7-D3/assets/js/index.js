@@ -1,5 +1,5 @@
 let bookshelfRef = document.getElementById("row");
-let cart = localStorage.getItem("cart") || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let booksArray = [];
 let cartRef = document.getElementById("cart");
 
@@ -47,15 +47,14 @@ let remove = function (event) {
 let removeFromCart = function (event) {
   let cartArray = JSON.parse(localStorage.getItem("cart"));
   let cartElementId = event.target.parentNode.getAttribute("id");
-  console.log(cartElementId);
+  //console.log(cartElementId);
   let foundBook = cartArray.filter((book) => book.asin == cartElementId);
   let foundIndex = cartArray.indexOf(foundBook[0]);
-  console.log(cartArray);
+  //console.log(cartArray);
   cartArray.splice(foundIndex, 1);
-  console.log(cartArray);
+  //console.log(cartArray);
   localStorage.setItem("cart", JSON.stringify(cartArray));
   foundBook = [];
-
   print();
 };
 
@@ -65,7 +64,7 @@ let print = function () {
   let storage = localStorage.getItem("cart");
   let cartArray = JSON.parse(storage);
   if (cartArray) {
-    console.log(cartArray);
+    //console.log(cartArray);
     cartRef.innerHTML = "";
     cartArray.forEach((el) => {
       let newLi = document.createElement("li");
