@@ -57,11 +57,14 @@ let removeFromCart = function (event) {
 };
 
 //console.log(JSON.parse(cart));
-let cartArray = JSON.parse(cart);
 
 let print = function () {
+  let storage = localStorage.getItem("cart");
+
+  let cartArray = JSON.parse(storage);
+  console.log(cartArray);
+  cartRef.innerHTML = "";
   cartArray.forEach((el) => {
-    cartRef.innerHTML = "";
     let newLi = document.createElement("li");
     newLi.innerHTML = `
     <div class="card-body text-light m-2" id=${el.asin}>
