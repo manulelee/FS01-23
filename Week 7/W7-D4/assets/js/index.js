@@ -1,5 +1,5 @@
 const PEXELS_URL = "https://api.pexels.com/v1/search?query=";
-let query1 = "Surf";
+let query1 = "Ocean";
 let query2 = "Dinosaurs";
 let rowRef = document.querySelector("#row");
 let addFirstBtn = document.getElementById("1");
