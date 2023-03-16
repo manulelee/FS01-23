@@ -1,9 +1,16 @@
 const PEXELS_URL = "https://api.pexels.com/v1/search?query=";
 let query1 = "Ocean";
 let query2 = "Dinosaurs";
+let searchBar = document.querySelector("form input");
 let rowRef = document.querySelector("#row");
 let addFirstBtn = document.getElementById("1");
 let addSecondBtn = document.getElementById("2");
+let searchBtn = document.querySelector(".btn-outline-success");
+let myQuery;
+
+searchBar.addEventListener("onkeyup", function () {
+  myQuery = searchBar.value;
+});
 
 addFirstBtn.addEventListener("click", function () {
   rowRef.innerHTML = " ";
@@ -19,12 +26,11 @@ let hide = function (event) {
   event.target.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.classList.add("d-none");
 };
 const printPics = function (pic) {
-  //console.log(rowRef);
   let newCard = `<div class="col-md-4">
       <div class="card mb-4 shadow-sm">
       <img src="${pic.src.medium}" alt="${pic.alt}">
         <div class="card-body d-flex flex-column justify-content-between">
-          <h5 class="card-title">Titolo:</h5>
+          <h5 class="card-title">${pic.alt}</h5>
           <p class="card-text">
             Author: ${pic.photographer} (${pic.photographer_id})<br>
             Author profile: <a href="${pic.photographer_url}">${pic.photographer_url}<a><br>
@@ -55,6 +61,7 @@ let getPictures = async function (query) {
     if (response.ok) {
       let pictures = await response.json();
       console.log(pictures);
+      rowRef.innerHTML = " ";
       pictures.photos.forEach((pic) => {
         printPics(pic);
       });
