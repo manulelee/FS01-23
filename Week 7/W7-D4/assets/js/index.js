@@ -22,7 +22,7 @@ const printPics = function (pic) {
   //console.log(rowRef);
   let newCard = `<div class="col-md-4">
       <div class="card mb-4 shadow-sm">
-      <img src="${pic.src.small}" alt="${pic.alt}">
+      <img src="${pic.src.medium}" alt="${pic.alt}">
         <div class="card-body d-flex flex-column justify-content-between">
           <h5 class="card-title">Titolo:</h5>
           <p class="card-text">
