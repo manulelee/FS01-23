@@ -61,25 +61,27 @@ const saveProduct = async function (newProduct) {
   }
 };
 const deleteProduct = async function () {
-  if (productId) {
-    try {
-      let url = API_URL + productId;
+  if (confirm("Are you sure?...")) {
+    if (productId) {
+      try {
+        let url = API_URL + productId;
 
-      let response = await fetch(url, {
-        method: "DELETE",
-        headers: {
-          Authorization: TOKEN,
-          "Content-Type": "application/json",
-        },
-      });
-      if (response.ok) {
-        alert("Saved changes");
-      } else {
-        alert("Error while saving the product");
+        let response = await fetch(url, {
+          method: "DELETE",
+          headers: {
+            Authorization: TOKEN,
+            "Content-Type": "application/json",
+          },
+        });
+        if (response.ok) {
+          console.log("PRODUCT DELETED");
+        } else {
+          alert("Error while saving the product");
+        }
+        window.location.replace("index.html");
+      } catch (error) {
+        console.log(error);
       }
-      window.location.replace("index.html");
-    } catch (error) {
-      console.log(error);
     }
   }
 };
