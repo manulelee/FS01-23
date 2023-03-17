@@ -17,7 +17,7 @@ const printProducts = function (prod) {
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <a href="./details.html?productId=${prod._id}" class="btn btn-sm btn-outline-secondary">View details</a>
-              <a class="btn btn-sm btn-outline-secondary">Add to cart</a>
+              <a href="./backoffice.html?productId=${prod._id}"class="btn btn-sm btn-outline-secondary">Edit</a>
             </div>
             
           </div><small class="text-muted mt-3">Pruduct ID: ${prod._id}</small>

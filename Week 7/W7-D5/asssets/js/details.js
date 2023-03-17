@@ -2,11 +2,11 @@ const API_URL = "https://striveschool-api.herokuapp.com/api/product/";
 const TOKEN =
   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0MjdkZmY4MWI0MjAwMTM5YjI3ZGEiLCJpYXQiOjE2NzkwNDI1MjcsImV4cCI6MTY4MDI1MjEyN30.6GzsAtuBmdchgF3K36qQJB-Rbh9rXZ-dXT20loXiKfs";
 
-let eventId = new URLSearchParams(window.location.search).get("productId");
+let productId = new URLSearchParams(window.location.search).get("productId");
 
 const getProduct = async function () {
   try {
-    let response = await fetch(API_URL + eventId, {
+    let response = await fetch(API_URL + productId, {
       method: "GET",
       headers: {
         Authorization: TOKEN,
@@ -36,27 +36,11 @@ const getProduct = async function () {
       </div>
     </div>`;
     } else {
-      return new Error("Problema nel recuperare i dettagli dell'evento");
+      return new Error("Error while loadig product details");
     }
   } catch (error) {
     console.log(error);
   }
 };
-/*
-let deleteButtonReference = document.getElementById("delete");
-deleteButtonReference.addEventListener("click", async () => {
-  let response = await fetch(API_URL + eventId, {
-    method: "DELETE",
-    headers: {
-      Authorization: TOKEN,
-    },
-  });
-  console.log(response);
-  if (response.ok) {
-    alert("EVENTO ELIMINATO CORRETTAMENTE");
-    window.location.replace("./index.html");
-  } else {
-    alert("PROBLEMA NELL'ELIMINAZIONE DELL'EVENTO");
-  }
-});*/
+
 getProduct();
