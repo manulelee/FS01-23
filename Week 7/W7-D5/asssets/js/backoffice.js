@@ -27,9 +27,7 @@ if (productId) {
       document.querySelector(".spinner-border").classList.add("d-none");
       document.getElementById("brand").value = product.brand;
       document.getElementById("name").value = product.name;
-      document.getElementById("model").value = product.description.model;
-      document.getElementById("capacity").value = product.description.capacity;
-      document.getElementById("color").value = product.description.color;
+      document.getElementById("description").value = product.description;
       document.getElementById("imgUrl").value = product.imageUrl;
       document.getElementById("price").value = product.price;
     })
@@ -92,15 +90,10 @@ formReference.addEventListener("submit", (e) => {
   let newProduct = {
     name: document.getElementById("name").value,
     brand: document.getElementById("brand").value,
-    description: {
-      model: document.getElementById("model").value,
-      capacity: document.getElementById("capacity").value,
-      color: document.getElementById("color").value,
-    },
+    description: document.getElementById("description").value,
     price: document.getElementById("price").value,
     imageUrl: document.getElementById("imgUrl").value,
   };
   console.log(newProduct);
-  console.log(newProduct.description);
   saveProduct(newProduct);
 });
