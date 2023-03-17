@@ -13,7 +13,7 @@ const printProducts = function (prod) {
           <h5 class="card-title">${prod.name}</h5>
           <p class="card-text">
             Brand: ${prod.brand}<br>
-            Description:${prod.description}<br>
+            Model:${prod.name}<br>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <a href="./details.html?productId=${prod._id}" class="btn btn-sm btn-outline-secondary">View details</a>
@@ -86,3 +86,28 @@ postProducts(
   "600"
 );
 */
+
+const search = function () {
+  let cards = document.querySelectorAll(".col-md-4");
+  let searchQuery = document.querySelector("nav form");
+  cards.forEach((card) => {
+    console.log(card.innerText.includes(searchQuery.value)); //.includes(searchQuery.value)
+  });
+};
+
+function myFunction() {
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.querySelector("nav form");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
