@@ -19,12 +19,15 @@ const getProduct = async function () {
       console.log(rowRef);
       rowRef.innerHTML = `<div class="col col-8 mt-5 m-auto">
       <div class="card mb-4 shadow-sm">
+      <div class="imgContainer d-flex justify-content-center align-items-center">
       <img src="${prod.imageUrl}" alt="${prod.name} image">
+      </div>
         <div class="card-body d-flex flex-column justify-content-between">
           <h5 class="card-title">${prod.name}</h5>
           <p class="card-text">
             Brand: ${prod.brand}<br>
-            Description:${prod.description}<br>
+            ${prod.description}<br>
+            <b> Price: ${prod.price}€</b><br>
             ID: ${prod._id}
           <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
@@ -39,7 +42,7 @@ const getProduct = async function () {
       return new Error("Error while loadig product details");
     }
   } catch (error) {
-    console.log(error);
+    alert(error);
   }
 };
 

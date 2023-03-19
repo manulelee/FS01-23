@@ -32,7 +32,7 @@ if (productId) {
       document.getElementById("price").value = product.price;
     })
     .catch((err) => {
-      console.log(err);
+      alert(err);
     });
 } else {
   document.getElementById("delete").classList.add("d-none");
@@ -57,11 +57,11 @@ const saveProduct = async function (newProduct) {
     }
     window.location.replace("index.html");
   } catch (error) {
-    console.log(error);
+    alert(error);
   }
 };
 const deleteProduct = async function () {
-  if (confirm("Are you sure?...")) {
+  if (confirm("Are you sure? This product will be removed fom the store...")) {
     if (productId) {
       try {
         let url = API_URL + productId;
@@ -80,7 +80,7 @@ const deleteProduct = async function () {
         }
         window.location.replace("index.html");
       } catch (error) {
-        console.log(error);
+        alert(error);
       }
     }
   }
@@ -99,3 +99,20 @@ formReference.addEventListener("submit", (e) => {
   console.log(newProduct);
   saveProduct(newProduct);
 });
+
+let keyUpF = function () {
+  let imgRef = document.querySelector("#imgContainer img");
+  imgRef.setAttribute("src", document.getElementById("imgUrl").value);
+};
+
+let resetForm = function () {
+  if (confirm("Are you sure? All values will be deleted...")) {
+    let image = document.querySelector("#imgContainer img");
+    image.removeAttribute("src");
+    document.getElementById("brand").value = "";
+    document.getElementById("name").value = "";
+    document.getElementById("description").value = "";
+    document.getElementById("imgUrl").value = "";
+    document.getElementById("price").value = "";
+  }
+};

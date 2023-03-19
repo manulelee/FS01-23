@@ -21,9 +21,9 @@
             <a class="nav-link ms-2" aria-current="page" href="./backoffice.html">BackOffice</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search product" aria-label="Search" />
-          <div class="btn btn-outline-success" onclick="search()">Search</div>
+        <form class="d-flex" role="search" onsubmit="submitFunction(event)">
+          <input class="form-control me-2" type="search" placeholder="Search product" onkeyup="search()" aria-label="Search" />
+          <div class="btn btn-outline-warning" onclick="search()">Search</div>
         </form>
       </div>
     </nav>

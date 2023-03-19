@@ -11,9 +11,16 @@ nav img {
 }
 .card {
   width: 100%;
-  aspect-ratio: 3/5;
+  height: 797px;
 }
-.card img {
+
+.card .imgContainer {
   width: 100%;
   aspect-ratio: 1/1;
+}
+
+.card img {
+  width: 80%;
+  max-height: 80%;
+  height: fit-content;
 }

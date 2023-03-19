@@ -8,12 +8,14 @@ let searchBtn = document.querySelector(".btn-outline-success");
 const printProducts = function (prod) {
   let newCard = `<div class="col-md-4">
       <div class="card mb-4 shadow-sm">
+      <div class="imgContainer d-flex justify-content-center align-items-center">
       <img src="${prod.imageUrl}" alt="${prod.name} image">
+      </div>
         <div class="card-body d-flex flex-column justify-content-between">
           <h5 class="card-title">${prod.name}</h5>
           <p class="card-text">
             Brand: ${prod.brand}<br>
-            Model:${prod.name}<br>
+            <b>Price: ${prod.price}€</b><br>
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <a href="./details.html?productId=${prod._id}" class="btn btn-sm btn-outline-secondary">View details</a>
@@ -26,6 +28,7 @@ const printProducts = function (prod) {
     </div>`;
   rowRef.innerHTML += newCard;
 };
+let products = [];
 
 let getProducts = async function () {
   try {
@@ -36,7 +39,7 @@ let getProducts = async function () {
       },
     });
     if (response.ok) {
-      let products = await response.json();
+      products = await response.json();
       console.log(rowRef);
       console.log(products);
       rowRef.innerHTML = " ";
@@ -46,7 +49,9 @@ let getProducts = async function () {
     } else {
       return new Error("Errore di caricamento dei prodotti");
     }
-  } catch (error) {}
+  } catch (error) {
+    alert(error);
+  }
 };
 
 getProducts();
@@ -74,7 +79,9 @@ let postProducts = async function (_productName, _productDescription, _productBr
     } else {
       return new Error("Errore di inserimento del prodotto");
     }
-  } catch (error) {}
+  } catch (error) {
+    alert(error);
+  }
 };
 
 /*
@@ -88,9 +95,26 @@ postProducts(
 */
 
 const search = function () {
-  let cards = document.querySelectorAll(".col-md-4");
-  let searchQuery = document.querySelector("nav form");
-  cards.forEach((card) => {
-    console.log(card.innerText.includes(searchQuery.value)); //.includes(searchQuery.value)
+  let searchQuery = document.querySelector("nav form input").value;
+  //console.log(products);
+  //console.log(searchQuery);
+  rowRef.innerHTML = "";
+  let foundProducts = [];
+  products.forEach((prod) => {
+    if (
+      prod.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+      prod.description.toLowerCase().includes(searchQuery.toLowerCase())
+    ) {
+      foundProducts.push(prod);
+    }
   });
+  foundProducts.forEach((prod) => {
+    printProducts(prod);
+  });
+  console.log(foundProducts);
+};
+
+const submitFunction = function (event) {
+  event.preventDefault();
+  search();
 };
